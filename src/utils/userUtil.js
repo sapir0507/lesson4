@@ -1,8 +1,15 @@
 import axios from 'axios';
+import enviroment from '../env/env';
 
-const url ='https://jsonplaceholder.typicode.com/users/'
+const url = enviroment.users;
 
-const getUserDetails = (id) => { return axios.get(url+id) }
+const getUsersDetails = () => { 
+    return axios.get(url) 
+}
+
+const getUserDetails = (id) => { 
+    return axios.get(url+id) 
+}
 
 const getEmail = async(id) => { 
     let resp =  await getUserDetails(id)
@@ -27,7 +34,8 @@ const userUtil = {
     getUserDetails,
     updateUser,
     getEmail,
-    getUsername
+    getUsername,
+    getUsersDetails
 }
 
 export default userUtil;

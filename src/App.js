@@ -1,4 +1,4 @@
-import HomepageComp from './components/homepage/homepage';
+import HomepageComp from './components/ex1/homepage/homepage';
 import '/node_modules/bootstrap/dist/css/bootstrap.css.map';
 
 function App() {
